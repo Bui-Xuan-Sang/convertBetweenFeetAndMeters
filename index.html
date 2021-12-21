@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<p>
+    <label>Giá trị</label>
+    <input type="number" placeholder="giá trị" oninput="LengthConverter(this.value)"
+           onchange="LengthConverter1(this.value)">
+</p>
+<p>Feet: <span id="inputFeet"></span></p>
+<p>Meters: <span id="outputMeters"></span></p>
+<script>
+    function LengthConverter(valNum) {
+        document.getElementById("outputMeters").innerHTML = valNum / 3.2808;
+    }
+
+    function LengthConverter1(valNum) {
+        document.getElementById("inputFeet").innerHTML = valNum / 0.305;
+    }
+</script>
+</body>
+</html>
